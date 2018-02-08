@@ -5,4 +5,11 @@
 
 The library has not been *tested* since it was in development, which was about 3 years ago. The library will no longer be maintained.
 
+## Dependencies ##
+----------------
 The only dependence is the OpenGL library.
+
+In order to compile the program, the following Debian packages has to be installed.
+```
+apt-get install mesa-common-dev
+```
