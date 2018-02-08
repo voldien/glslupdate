@@ -42,7 +42,7 @@ unsigned int glupCopyGLSLUniform(UniformAllocationCollection* collection,
 	if(!numUniform)
 		return 0;	/*error nothing was copied*/
 
-	/*	*/
+	/*	Allocate memory for each uniform.	*/
 	collection->numUniform = numUniform;
 	collection->uniform_all = (UniformAllocation*)malloc(sizeof(*collection) * numUniform);
 
@@ -504,6 +504,5 @@ unsigned int glupGetGLSLTypeSize(unsigned int type) {
 void glupFreeGLSLUnicoll(UniformAllocationCollection* collection){
 
 	assert(collection);
-
 	free(collection->uniform_all);
 }

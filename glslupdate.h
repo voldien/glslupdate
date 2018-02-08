@@ -34,12 +34,12 @@ extern "C"{
  * 	Uniform allocation block.
  */
 typedef struct uniform_allocation_t{
-	unsigned int uniform_type;			/*	Data Type	*/
-	unsigned int size;				/*	size	*/
-	unsigned int index;				/*	Index Uniform Location	*/
-	unsigned int Array;				/*	Array	*/
-	char name[64];					/*	name	*/
-	unsigned int data[32];				/*	data	*/
+	unsigned int uniform_type;          /*	Data type uniform.	*/
+	unsigned int size;                  /*	Size in bytes.	*/
+	unsigned int index;                 /*	Index Uniform Location	*/
+	unsigned int Array;                 /*	Array	*/
+	char name[64];                      /*	Name of the attribute.	*/
+	unsigned int data[32];              /*	Data associated with the attribute.	*/
 }UniformAllocation;
 
 /**
@@ -91,9 +91,7 @@ extern GLUPDECLSPEC unsigned int GLUAPIENTRY glupGetGLSLTypeSize(
         unsigned int type);
 
 /**
- *   Free resources from uniform allocation buffer.
- *
- *   @Return
+ *	Free resources from uniform allocation buffer.
  */
 extern GLUPDECLSPEC void GLUAPIENTRY glupFreeGLSLUnicoll(
         UniformAllocationCollection* collection);
