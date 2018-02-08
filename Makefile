@@ -38,8 +38,9 @@ debug : $(OBJS)
 	$(CC) $(CFLAGS) -c $^ -o $@
 
 install : $(TARGET)
-	$(MKDIR) $(INSTALL_LOCATION)/bin
-	$(CP) $(TARGET) $(INSTALL_LOCATION)/bin
+	$(MKDIR) $(INSTALL_LOCATION)/lib
+	$(CP) $(TARGET).so $(INSTALL_LOCATION)/lib
+	$(CP) *.h $(INSTALL_LOCATION)/include
 
 
 distribution : $(TARGET)
